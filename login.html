@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #495057;
+        }
+
+        main {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+        }
+
+        .loading::after {
+            content: "Carregando...";
+            animation: loadingAnimation 0.5s infinite alternate;
+        }
+
+        @keyframes loadingAnimation {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Produtos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="registro.html">Registro de Usuário</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="adicionar_produto.html">Adicionar Produto</a></li>
+            <li><a href="visualizar_produto.html">Visualizar Produtos</a></li>
+            <li><a href="atualizar_produto.html">Atualizar Produto</a></li>
+            <li><a href="excluir_produto.html">Excluir Produto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="submitForm(event)">
+                <label for="nome_usuario_login">Nome de Usuário:</label>
+                <input type="text" id="nome_usuario_login" name="nome_usuario_login" required>
+                <label for="senha_login">Senha:</label>
+                <input type="password" id="senha_login" name="senha_login" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <div class="loading" id="loading"></div>
+        </section>
+    </main>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); 
+            document.getElementById('loading').style.display = 'block';
+            setTimeout(function() {
+                 window.location.href = 'dashboard.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

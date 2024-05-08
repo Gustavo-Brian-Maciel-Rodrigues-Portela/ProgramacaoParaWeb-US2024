@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #495057;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .produto {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .produto p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Produtos</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="registro.html">Registro de Usuário</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="adicionar_produto.html">Adicionar Produto</a></li>
+            <li><a href="visualizar_produto.html">Visualizar Produtos</a></li>
+            <li><a href="atualizar_produto.html">Atualizar Produto</a></li>
+            <li><a href="excluir_produto.html">Excluir Produto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Visualizar Produtos</h2>
+            <div class="produto">
+                <p><strong>Nome:</strong> Produto A</p>
+                <p><strong>Categoria:</strong> Eletrônicos</p>
+                <p><strong>Preço:</strong> R$ 100,00</p>
+                <p><strong>Descrição:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="produto">
+                <p><strong>Nome:</strong> Produto B</p>
+                <p><strong>Categoria:</strong> Vestuário</p>
+                <p><strong>Preço:</strong> R$ 50,00</p>
+                <p><strong>Descrição:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="produto">
+                <p><strong>Nome:</strong> Produto C</p>
+                <p><strong>Categoria:</strong> Alimentos</p>
+                <p><strong>Preço:</strong> R$ 20,00</p>
+                <p><strong>Descrição:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
